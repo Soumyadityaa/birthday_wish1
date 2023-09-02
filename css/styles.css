@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+h1{
+    color: rgba(255, 95, 95, 0.863);
+    font-weight: 1000;
+    letter-spacing: 2px;
+    text-shadow: rgb(99, 99, 99);
+    border: #555;
+}
+h2{
+    color: dodgerblue;
+}
+p{
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 2px
+}
+#header {
+    background-color: rgb(45, 150, 255);
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid rgb(255, 75, 105);
+    border-radius: 10px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#gift-icon {
+    font-size: 50px;
+}
+
+.birthday-wish {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid pink;
+    border-radius: 10px;
+    background-color: #fde8e8;
+}
+.hover-effect:hover {
+    transform: scale(1.05); /* Scale up when hovered */
+    transition: transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* ... (previous CSS code) ... */
+
+/* Add styles for the pop-up */
+#popup-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999;
+    backdrop-filter: blur(5px); /* Apply blur to the background */
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 2px solid pink;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add shadow to the pop-up */
+    z-index: 1000;
+}
+
+#close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#popup-iframe {
+    width: 750px;
+    height: 600px;
+    border: none;
+}
+
+.image-container {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Adjust the width and height as needed */
+    height: 100px;
+    overflow: hidden;
+
+}
+
+#shaking-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+#shaking-image:hover {
+    transform: translateX(-5px); /* Adjust the amount of shake */
+    animation: shake 0.5s ease infinite; /* Add a shake animation */
+}
+
+@keyframes shake {
+    0% { transform: translateX(-5px); }
+    25% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(-5px); }
+}
